@@ -73,7 +73,7 @@ make clean     가상환경 + 테스트 결과 삭제
 
 ## API 정보
 
-| API | 호출 키 | 결과 파일 |
+| API | 호출 키 | 결과 파일 | 
 |-----|---------|-----------|
 | `getBusArrivalListv2` | `stationId` | `bus_arrival_by_station.json` |
 | `getBusArrivalItemv2` | `stationId` + `routeId` + `staOrder` | `bus_arrival_by_route.json` |
@@ -86,3 +86,11 @@ make clean     가상환경 + 테스트 결과 삭제
 - [ ] `fetch` 중간 체크포인트 — 실패 시 이어서 수집
 - [ ] 결과 데이터 불필요 필드 소거
 - [ ] 지도 API 연동 (Kakao / Naver / T Map)
+
+---
+
+## 참조
+- [공공 데이터] 경기도_버스도착정보 조회: https://www.data.go.kr/data/15080346/openapi.do#/API%20%EB%AA%A9%EB%A1%9D/getBusArrivalItemv2
+- [공공 데이터] 경기도_버스 노선 경유정류소 정보: https://www.data.go.kr/data/15124068/fileData.do#
+    - Real 데이터: https://data.gg.go.kr/portal/data/service/selectServicePage.do?page=1&rows=10&sortColumn=&sortDirection=&infId=TEXYY9BODHAA8QZ1ZZG233176356&infSeq=3&order=&loc=
+- 네이버 Maps API 가이드: https://api.ncloud-docs.com/docs/application-maps-overview
