@@ -1,0 +1,139 @@
+{
+  "$schema": {
+    "Route": {
+      "description": "출발지에서 도착지까지의 멀티모달 경로",
+      "fields": {
+        "route_id": "string — 경로 고유 ID",
+        "origin": "Place — 출발지",
+        "destination": "Place — 도착지",
+        "total_duration_min": "number — 총 소요시간(분)",
+        "total_transfers": "number — 환승 횟수",
+        "legs": "Leg[] — 경로 구간 목록 (순서대로)"
+      }
+    },
+    "Place": {
+      "description": "장소 정보",
+      "fields": {
+        "name": "string — 장소명",
+        "type": "string — ORIGIN | DESTINATION | BUS_STOP",
+        "lat": "number | null — 위도",
+        "lng": "number | null — 경도"
+      }
+    },
+    "Leg": {
+      "description": "경로의 한 구간 (도보 또는 버스)",
+      "fields": {
+        "seq": "number — 구간 순서 (1부터)",
+        "type": "string — WALK | BUS",
+        "duration_min": "number — 소요시간(분)",
+        "start_name": "string — 구간 출발지명",
+        "end_name": "string — 구간 도착지명",
+        "bus": "BusInfo | null — 버스 구간일 때만 존재"
+      }
+    },
+    "BusInfo": {
+      "description": "버스 탑승 정보",
+      "fields": {
+        "route_name": "string — 버스 노선명 (예: 9409, 1151)",
+        "board_stop": "string — 승차 정류장명",
+        "alight_stop": "string — 하차 정류장명"
+      }
+    }
+  },
+  "routes": [
+    {
+      "route_id": "route-001",
+      "origin": { "name": "강남역", "type": "ORIGIN", "lat": 37.4980, "lng": 127.0276 },
+      "destination": { "name": "NHN", "type": "DESTINATION", "lat": 37.4005, "lng": 127.1060 },
+      "total_duration_min": 44,
+      "total_transfers": 0,
+      "legs": [
+        {
+          "seq": 1,
+          "type": "WALK",
+          "duration_min": 2,
+          "start_name": "강남역",
+          "end_name": "신분당선강남역",
+          "bus": null
+        },
+        {
+          "seq": 2,
+          "type": "BUS",
+          "duration_min": 39,
+          "start_name": "신분당선강남역",
+          "end_name": "금토천교",
+          "bus": {
+            "route_name": "9409",
+            "board_stop": "신분당선강남역",
+            "alight_stop": "금토천교"
+          }
+        },
+        {
+          "seq": 3,
+          "type": "WALK",
+          "duration_min": 3,
+          "start_name": "금토천교",
+          "end_name": "NHN",
+          "bus": null
+        }
+      ]
+    },
+    {
+      "route_id": "route-002",
+      "origin": { "name": "강남역", "type": "ORIGIN", "lat": 37.4980, "lng": 127.0276 },
+      "destination": { "name": "NHN", "type": "DESTINATION", "lat": 37.4005, "lng": 127.1060 },
+      "total_duration_min": 47,
+      "total_transfers": 1,
+      "legs": [
+        {
+          "seq": 1,
+          "type": "WALK",
+          "duration_min": 2,
+          "start_name": "강남역",
+          "end_name": "신분당선강남역",
+          "bus": null
+        },
+        {
+          "seq": 2,
+          "type": "BUS",
+          "duration_min": 28,
+          "start_name": "신분당선강남역",
+          "end_name": "판교역.낙생육교.현대백화",
+          "bus": {
+            "route_name": "1151",
+            "board_stop": "신분당선강남역",
+            "alight_stop": "판교역.낙생육교.현대백화"
+          }
+        },
+        {
+          "seq": 3,
+          "type": "WALK",
+          "duration_min": 5,
+          "start_name": "판교역.낙생육교.현대백화",
+          "end_name": "백현마을1단지",
+          "bus": null
+        },
+        {
+          "seq": 4,
+          "type": "BUS",
+          "duration_min": 9,
+          "start_name": "백현마을1단지",
+          "end_name": "네오위즈.NHN",
+          "bus": {
+            "route_name": "380",
+            "board_stop": "백현마을1단지",
+            "alight_stop": "네오위즈.NHN"
+          }
+        },
+        {
+          "seq": 5,
+          "type": "WALK",
+          "duration_min": 1,
+          "start_name": "네오위즈.NHN",
+          "end_name": "NHN",
+          "bus": null
+        }
+      ]
+    }
+  ]
+}
