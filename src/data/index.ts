@@ -4,6 +4,7 @@ import scenarioData from './scenario.json';
 import templatesData from './templates.json';
 import plansData from './plans.json';
 import mapRouteData from './mapRoute.json';
+import waypointsData from './waypoints.json';
 
 // Type definitions
 export interface SpeedOption {
@@ -42,8 +43,7 @@ export interface BoardingProbability {
   probability: number[];
 }
 
-export interface Route {
-  id: string;
+export interface RouteLeg {
   busNumber: string;
   departure: string;
   arrival: string;
@@ -53,6 +53,25 @@ export interface Route {
   avgRideMinutes: number;
   rideStdDevMinutes: number;
   boardingProbability: BoardingProbability;
+}
+
+export interface Route {
+  id: string;
+  /** 단일 노선일 때 사용 */
+  busNumber: string;
+  departure: string;
+  arrival: string;
+  walkToStop: WalkSegment;
+  walkFromStop: WalkSegment;
+  busSchedule: BusSchedule;
+  avgRideMinutes: number;
+  rideStdDevMinutes: number;
+  boardingProbability: BoardingProbability;
+  /** 환승 경로일 경우 legs 배열 존재 */
+  legs?: RouteLeg[];
+  /** 환승 노선 여부 */
+  isTransfer?: boolean;
+  transferCount?: number;
 }
 
 export interface Routes {
@@ -113,6 +132,18 @@ export interface MapRouteData {
   walkPathFromStop: LatLng[];
 }
 
+export interface Waypoint {
+  id: string;
+  name: string;
+  category: string;
+  categoryLabel: string;
+  icon: string;
+  estimatedMinutes: number;
+  description: string;
+  lat: number;
+  lng: number;
+}
+
 // Export data with types
 export const settings = settingsData as Settings;
 export const routes = routesData as Routes;
@@ -120,6 +151,7 @@ export const scenario = scenarioData as Scenario;
 export const templates = templatesData.templates as Template[];
 export const plans = plansData.plans as MovingPlan[];
 export const mapRoute = mapRouteData as MapRouteData;
+export const waypoints = waypointsData.waypoints as Waypoint[];
 
 export const mockData = {
   settings,
@@ -128,6 +160,7 @@ export const mockData = {
   templates,
   plans,
   mapRoute,
+  waypoints,
 } as const;
 
 export default mockData;

@@ -1,0 +1,81 @@
+{
+  "waypoints": [
+    {
+      "id": "wp-1",
+      "name": "스타벅스 강남역점",
+      "category": "cafe",
+      "categoryLabel": "카페",
+      "icon": "☕",
+      "estimatedMinutes": 5,
+      "description": "커피 테이크아웃",
+      "lat": 37.4982,
+      "lng": 127.0270
+    },
+    {
+      "id": "wp-2",
+      "name": "이디야커피 강남점",
+      "category": "cafe",
+      "categoryLabel": "카페",
+      "icon": "☕",
+      "estimatedMinutes": 4,
+      "description": "커피 테이크아웃",
+      "lat": 37.4978,
+      "lng": 127.0258
+    },
+    {
+      "id": "wp-3",
+      "name": "올리브영 강남역점",
+      "category": "drugstore",
+      "categoryLabel": "드러그스토어",
+      "icon": "💊",
+      "estimatedMinutes": 10,
+      "description": "간단한 쇼핑",
+      "lat": 37.4975,
+      "lng": 127.0275
+    },
+    {
+      "id": "wp-4",
+      "name": "CU 강남역삼점",
+      "category": "convenience",
+      "categoryLabel": "편의점",
+      "icon": "🏪",
+      "estimatedMinutes": 3,
+      "description": "간식·음료 구매",
+      "lat": 37.4980,
+      "lng": 127.0265
+    },
+    {
+      "id": "wp-5",
+      "name": "교보문고 강남점",
+      "category": "bookstore",
+      "categoryLabel": "서점",
+      "icon": "📚",
+      "estimatedMinutes": 15,
+      "description": "책 구경·구매",
+      "lat": 37.4970,
+      "lng": 127.0282
+    },
+    {
+      "id": "wp-6",
+      "name": "다이소 판교점",
+      "category": "store",
+      "categoryLabel": "생활용품",
+      "icon": "🛒",
+      "estimatedMinutes": 8,
+      "description": "필요한 물건 구매",
+      "lat": 37.4025,
+      "lng": 127.1075
+    },
+    {
+      "id": "wp-7",
+      "name": "투썸플레이스 판교점",
+      "category": "cafe",
+      "categoryLabel": "카페",
+      "icon": "☕",
+      "estimatedMinutes": 5,
+      "description": "커피 테이크아웃",
+      "lat": 37.4022,
+      "lng": 127.1070
+    }
+  ]
+}
