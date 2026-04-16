@@ -1,0 +1,97 @@
+[
+  {
+    "origin": "강남역",
+    "destination": "NHN",
+    "totalMinutes": 44,
+    "legs": [
+      {
+        "type": "walk",
+        "minutes": 2,
+        "from": { "name": "강남역", "lat": 37.4979, "lng": 127.0276 },
+        "to": { "name": "신분당선강남역", "lat": 37.4966, "lng": 127.0283 }
+      },
+      {
+        "type": "bus",
+        "routeName": "9409",
+        "minutes": 39,
+        "from": {
+          "stationId": "222000155",
+          "name": "신분당선강남역",
+          "lat": 37.4966,
+          "lng": 127.0283
+        },
+        "to": {
+          "stationId": "206000539",
+          "name": "금토천교",
+          "lat": 37.4013,
+          "lng": 127.1060333
+        }
+      },
+      {
+        "type": "walk",
+        "minutes": 3,
+        "from": { "name": "금토천교", "lat": 37.4013, "lng": 127.1060333 },
+        "to": { "name": "NHN", "lat": 37.4015, "lng": 127.1085 }
+      }
+    ]
+  },
+  {
+    "origin": "강남역",
+    "destination": "NHN",
+    "totalMinutes": 47,
+    "legs": [
+      {
+        "type": "walk",
+        "minutes": 2,
+        "from": { "name": "강남역", "lat": 37.4979, "lng": 127.0276 },
+        "to": { "name": "신분당선강남역", "lat": 37.4966, "lng": 127.0283 }
+      },
+      {
+        "type": "bus",
+        "routeName": "1151",
+        "minutes": 28,
+        "from": {
+          "stationId": "222000155",
+          "name": "신분당선강남역",
+          "lat": 37.4966,
+          "lng": 127.0283
+        },
+        "to": {
+          "stationId": "206000532",
+          "name": "판교역.낙생육교.현대백화점",
+          "lat": 37.3918667,
+          "lng": 127.1118833
+        }
+      },
+      {
+        "type": "walk",
+        "minutes": 5,
+        "from": { "name": "판교역.낙생육교.현대백화점", "lat": 37.3918667, "lng": 127.1118833 },
+        "to": { "name": "백현마을1단지", "lat": 37.3919667, "lng": 127.1145 }
+      },
+      {
+        "type": "bus",
+        "routeName": "380",
+        "minutes": 9,
+        "from": {
+          "stationId": "206000531",
+          "name": "백현마을1단지",
+          "lat": 37.3919667,
+          "lng": 127.1145
+        },
+        "to": {
+          "stationId": "206000802",
+          "name": "넥슨네트웍스.NHN엔터테인먼트.네오위즈",
+          "lat": 37.4003667,
+          "lng": 127.10265
+        }
+      },
+      {
+        "type": "walk",
+        "minutes": 1,
+        "from": { "name": "넥슨네트웍스.NHN엔터테인먼트.네오위즈", "lat": 37.4003667, "lng": 127.10265 },
+        "to": { "name": "NHN", "lat": 37.4015, "lng": 127.1085 }
+      }
+    ]
+  }
+]
