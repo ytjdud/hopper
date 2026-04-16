@@ -1,0 +1,12 @@
+# env
+.env
+.env.data
+
+# claude
+.claude
+
+# vitual env
+venv
+
+# result data
+result
