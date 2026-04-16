@@ -1,0 +1,64 @@
+{
+  "routes": [
+    {
+      "id": "route-1",
+      "busNumber": "143",
+      "departure": "강남역 버스정류장",
+      "arrival": "NHN Play Museum 앞 정류장",
+      "walkToStop": {
+        "distanceMeters": 600,
+        "trafficLights": 2
+      },
+      "walkFromStop": {
+        "distanceMeters": 560,
+        "trafficLights": 1
+      },
+      "busSchedule": {
+        "weekday": {
+          "morning": {
+            "firstBus": "05:30",
+            "lastBus": "08:30",
+            "avgIntervalMinutes": 7,
+            "intervalStdDevMinutes": 1.5
+          }
+        }
+      },
+      "avgRideMinutes": 28,
+      "rideStdDevMinutes": 4,
+      "boardingProbability": {
+        "minutesBefore": [0, 1, 2, 3, 5],
+        "probability": [0.50, 0.65, 0.78, 0.85, 0.92]
+      }
+    },
+    {
+      "id": "route-2",
+      "busNumber": "301",
+      "departure": "강남역 버스정류장",
+      "arrival": "NHN Play Museum 앞 정류장",
+      "walkToStop": {
+        "distanceMeters": 600,
+        "trafficLights": 2
+      },
+      "walkFromStop": {
+        "distanceMeters": 420,
+        "trafficLights": 0
+      },
+      "busSchedule": {
+        "weekday": {
+          "morning": {
+            "firstBus": "05:50",
+            "lastBus": "09:00",
+            "avgIntervalMinutes": 10,
+            "intervalStdDevMinutes": 2
+          }
+        }
+      },
+      "avgRideMinutes": 35,
+      "rideStdDevMinutes": 5,
+      "boardingProbability": {
+        "minutesBefore": [0, 1, 2, 3, 5],
+        "probability": [0.48, 0.60, 0.73, 0.82, 0.90]
+      }
+    }
+  ]
+}

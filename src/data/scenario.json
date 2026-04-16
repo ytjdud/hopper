@@ -1,0 +1,15 @@
+{
+  "user": {
+    "name": "김서연",
+    "age": 28,
+    "occupation": "사무직",
+    "floor": 8
+  },
+  "commute": {
+    "destination": "NHN Play Museum",
+    "desiredArrivalTime": "07:00",
+    "selectedWalkingSpeed": "fast",
+    "selectedElevatorSpeed": "normal",
+    "selectedRouteId": "route-1"
+  }
+}

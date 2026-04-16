@@ -1,0 +1,18 @@
+{
+  "plans": [
+    {
+      "id": "plan-1",
+      "templateId": "tpl-1",
+      "date": "2026-04-16",
+      "mode": "arrival",
+      "targetTime": "07:00"
+    },
+    {
+      "id": "plan-2",
+      "templateId": "tpl-2",
+      "date": "2026-04-18",
+      "mode": "departure",
+      "targetTime": "06:10"
+    }
+  ]
+}

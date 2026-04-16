@@ -1,0 +1,36 @@
+{
+  "walkingSpeed": {
+    "fast": {
+      "label": "빠름",
+      "minMeterPerMin": 80,
+      "maxMeterPerMin": 90
+    },
+    "normal": {
+      "label": "보통",
+      "minMeterPerMin": 70,
+      "maxMeterPerMin": 80
+    },
+    "slow": {
+      "label": "느림",
+      "minMeterPerMin": 60,
+      "maxMeterPerMin": 70
+    }
+  },
+  "elevatorSpeed": {
+    "fast": {
+      "label": "빠름",
+      "minutes": 2,
+      "description": "2분 내로 건물 탈출 가능"
+    },
+    "normal": {
+      "label": "보통",
+      "minutes": 4,
+      "description": "약 4분 소요"
+    },
+    "slow": {
+      "label": "느림",
+      "minutes": 6,
+      "description": "약 6분 소요"
+    }
+  }
+}
